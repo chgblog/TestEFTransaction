@@ -1,0 +1,50 @@
+﻿@model Test.Common.Model.b_MingZu
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>b_MingZu</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PaiXu)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PaiXu)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TianJiaShiJian)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TianJiaShiJian)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ZhuangTai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ZhuangTai)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MingZu }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

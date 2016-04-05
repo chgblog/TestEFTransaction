@@ -1,0 +1,56 @@
+﻿@model Test.Common.Model.b_MingZu
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>b_MingZu</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PaiXu)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PaiXu)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TianJiaShiJian)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TianJiaShiJian)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ZhuangTai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ZhuangTai)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

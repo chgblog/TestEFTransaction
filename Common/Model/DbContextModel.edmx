@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ChuanNongModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="b_MingZu">
+          <Key>
+            <PropertyRef Name="MingZu" />
+          </Key>
+          <Property Name="MingZu" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PaiXu" Type="int" Nullable="false" />
+          <Property Name="TianJiaShiJian" Type="datetime" Nullable="false" />
+          <Property Name="ZhuangTai" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="b_XiaoQu">
+          <Key>
+            <PropertyRef Name="XiaoQu" />
+          </Key>
+          <Property Name="XiaoQu" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PaiXu" Type="int" Nullable="false" />
+          <Property Name="TianJiaShiJian" Type="datetime" Nullable="false" />
+          <Property Name="ZhuangTai" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="b_XueLi">
+          <Key>
+            <PropertyRef Name="XueLi" />
+          </Key>
+          <Property Name="XueLi" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="PaiXu" Type="int" Nullable="false" />
+          <Property Name="TianJiaShiJian" Type="datetime" Nullable="false" />
+          <Property Name="ZhuangTai" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ChuanNongModelStoreContainer">
+          <EntitySet Name="b_MingZu" EntityType="Self.b_MingZu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="b_XiaoQu" EntityType="Self.b_XiaoQu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="b_XueLi" EntityType="Self.b_XueLi" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ChuanNongModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="b_MingZu">
+          <Key>
+            <PropertyRef Name="MingZu" />
+          </Key>
+          <Property Name="MingZu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PaiXu" Type="Int32" Nullable="false" />
+          <Property Name="TianJiaShiJian" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ZhuangTai" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="b_XiaoQu">
+          <Key>
+            <PropertyRef Name="XiaoQu" />
+          </Key>
+          <Property Name="XiaoQu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PaiXu" Type="Int32" Nullable="false" />
+          <Property Name="TianJiaShiJian" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ZhuangTai" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="b_XueLi">
+          <Key>
+            <PropertyRef Name="XueLi" />
+          </Key>
+          <Property Name="XueLi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PaiXu" Type="Int32" Nullable="false" />
+          <Property Name="TianJiaShiJian" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ZhuangTai" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ChuanNongEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="b_MingZu" EntityType="Self.b_MingZu" />
+          <EntitySet Name="b_XiaoQu" EntityType="Self.b_XiaoQu" />
+          <EntitySet Name="b_XueLi" EntityType="Self.b_XueLi" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ChuanNongModelStoreContainer" CdmEntityContainer="ChuanNongEntities">
+          <EntitySetMapping Name="b_MingZu">
+            <EntityTypeMapping TypeName="ChuanNongModel.b_MingZu">
+              <MappingFragment StoreEntitySet="b_MingZu">
+                <ScalarProperty Name="MingZu" ColumnName="MingZu" />
+                <ScalarProperty Name="PaiXu" ColumnName="PaiXu" />
+                <ScalarProperty Name="TianJiaShiJian" ColumnName="TianJiaShiJian" />
+                <ScalarProperty Name="ZhuangTai" ColumnName="ZhuangTai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_XiaoQu">
+            <EntityTypeMapping TypeName="ChuanNongModel.b_XiaoQu">
+              <MappingFragment StoreEntitySet="b_XiaoQu">
+                <ScalarProperty Name="XiaoQu" ColumnName="XiaoQu" />
+                <ScalarProperty Name="PaiXu" ColumnName="PaiXu" />
+                <ScalarProperty Name="TianJiaShiJian" ColumnName="TianJiaShiJian" />
+                <ScalarProperty Name="ZhuangTai" ColumnName="ZhuangTai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b_XueLi">
+            <EntityTypeMapping TypeName="ChuanNongModel.b_XueLi">
+              <MappingFragment StoreEntitySet="b_XueLi">
+                <ScalarProperty Name="XueLi" ColumnName="XueLi" />
+                <ScalarProperty Name="PaiXu" ColumnName="PaiXu" />
+                <ScalarProperty Name="TianJiaShiJian" ColumnName="TianJiaShiJian" />
+                <ScalarProperty Name="ZhuangTai" ColumnName="ZhuangTai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
