@@ -113,6 +113,10 @@
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="Webdiyer.MvcPager, Version=3.0.2015.802, Culture=neutral, PublicKeyToken=f6872c5a09aed72c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Webdiyer.MvcPager.3.0.1.1\lib\Webdiyer.MvcPager.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
